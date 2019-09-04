@@ -19,6 +19,8 @@
     - [Deleting a cache](#deleting-a-cache)
   - [IndexDB](#indexdb)
     - [Shape of IndexDB](#shape-of-indexdb)
+
+
 ## Registering service worker
 ```js
 navigator.serviceWorker.register('/sw.js', {
