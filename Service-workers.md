@@ -42,12 +42,6 @@ if(navigator.serviceWorker) {
 
 ## Scope
 The default scope will be the path to the `sw.js`. So just put the `sw.js` at thr right place.
-| sw.js location | Scope |
-| -------------- | ----- |
-|/sw.js          | /     |
-|/foo/sw.js      | /foo  |
-|/foo/bar/sw.js| /foo/bar|
-|/sw.js          | /     |
 
 ## Service worker events
 ```js
