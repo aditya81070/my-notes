@@ -1,6 +1,8 @@
 [Home](./index.md) / service-workers
 
 # Service worker notes
+
+- [Service worker notes](#service-worker-notes)
   - [Registering service worker](#registering-service-worker)
     - [Checking Compatibility](#checking-compatibility)
   - [Scope](#scope)
@@ -18,6 +20,7 @@
     - [Putting data into the cache](#putting-data-into-the-cache)
     - [Getting data from the cache](#getting-data-from-the-cache)
     - [Deleting a cache](#deleting-a-cache)
+    - [Deleting specific request from a cache](#deleting-specific-request-from-a-cache)
   - [IndexDB](#indexdb)
     - [Shape of IndexDB](#shape-of-indexdb)
 
@@ -209,6 +212,10 @@ A cache box contains `requst-response` pairs from any secure origin.
 **caches.keys()**: It will return the name of all caches.
 
 Both of them returns a promise.
+
+### Deleting specific request from a cache
+**cache.delete(request)**: It will delete particular entry from cache.
+**cache.keys()**: It will return a promise that will resolve to all request that stored in a cache. Then we can delete according to need.
 
 ## IndexDB
 
