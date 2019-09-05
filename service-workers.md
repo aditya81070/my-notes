@@ -1,4 +1,5 @@
-[Home](/)
+[Home](./index.md)
+
 # Service worker notes
   - [Registering service worker](#registering-service-worker)
     - [Checking Compatibility](#checking-compatibility)
