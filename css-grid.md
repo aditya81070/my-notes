@@ -18,9 +18,10 @@ CSS grid is a two dimensional model to design layouts and while flex box is a on
 - **Grid area** - The total area surrounded by four grid lines.
 
 ## Codepen demos
-<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="aditya81070" data-slug-hash="ZEzvWmo" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="ZEzvWmo">
-  <span>See the Pen <a href="https://codepen.io/aditya81070/pen/ZEzvWmo/">
-  ZEzvWmo</a> by Aditya Agarwal (<a href="https://codepen.io/aditya81070">@aditya81070</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+1. Simple Implementation
+  <p class="codepen" data-height="497" data-theme-id="dark" data-default-tab="css,result" data-user="aditya81070" data-slug-hash="ZEzvWmo" data-preview="true" style="height: 497px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS Grid">
+    <span>See the Pen <a href="https://codepen.io/aditya81070/pen/ZEzvWmo/">
+    CSS Grid</a> by Aditya Agarwal (<a href="https://codepen.io/aditya81070">@aditya81070</a>)
+    on <a href="https://codepen.io">CodePen</a>.</span>
+  </p>
+  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
