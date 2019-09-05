@@ -1,4 +1,4 @@
-[Home](./index.md)
+[Home](./index.md) / service-workers
 
 # Service worker notes
   - [Registering service worker](#registering-service-worker)
