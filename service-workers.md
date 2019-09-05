@@ -23,7 +23,7 @@
 
 
 ## Registering service worker
-```js
+```javascript
 navigator.serviceWorker.register('/sw.js', {
   // scope- service worker will have access to all the urls starting with scope
   scope: '/my-app/'
@@ -35,7 +35,7 @@ navigator.serviceWorker.register('/sw.js', {
 })
 ```
 ### Checking Compatibility
-```js
+```javascript
 if(navigator.serviceWorker) {
   //register service worker
 } else {
@@ -47,7 +47,7 @@ if(navigator.serviceWorker) {
 The default scope will be the path to the `sw.js`. So just put the `sw.js` at thr right place.
 
 ## Service worker events
-```js
+```javascript
 self.addEventListener('install', function (event) {
 
 });
@@ -64,7 +64,7 @@ self.addEventListener('fetch', function (event) {
 ### fetch event
 Every request from the page that is controlled by service worker goes through the sw and fetch event is emitted. We can check the request using `event.request`.
 
-```js
+```javascript
 self.addEventListener('fetch', function(e) {
   e.respondWith(
     // a promise
@@ -78,7 +78,7 @@ When a browser runs a service worker for the first time, install event is fired 
 The browser won't let this service worker take control of the page until its `install` event is completed.
 
 We use this opportunity to get everything from the network and create a cache for them.
-```js
+```javascript
 self.addEventListener('install', function(e) {
   e.waitUntil(
     //Promise
@@ -91,7 +91,7 @@ self.addEventListener('install', function(e) {
 This event is called when a service has taken over the control of the page and previous sw has gone.
 We can use this event to delete the old caches.
 
-```js
+```javascript
 self.addEventListener('activate', function(e) {
   // delete all the cache that are not required anymore
 })
@@ -104,7 +104,7 @@ self.addEventListener('activate', function(e) {
 
 ### Insight into lifecycle of service worker
 We can programmatically control the lifecycle of a sw. When we register a sw, it gives us a registration object that have various method and properties.
-```js
+```javascript
 navigator.serviceWorker.register('/sw.js').then(reg => {
 reg.unregister()
 reg.update()
@@ -119,7 +119,7 @@ reg.active
 * Registration object will emit `updateFound` when new update is found and `reg.installing` become a new worker.
 
 On this new worker, we can check the state.
-```js
+```javascript
 var sw = reg.installing //new worker
 console.log(sw.state); //logs installing -> sw is installing
 // installed-> sw has installed but not yet activated
@@ -128,14 +128,14 @@ console.log(sw.state); //logs installing -> sw is installing
 // redundant-> sw has been discarded either by a new sw or it is not installed correctly
 ```
 sw also fire `statechange` event whenever state property changes.
-```js
+```javascript
 sw.addEventListener('statechange', function(e) {
 
 })
 ```
 
 ### Telling user about update
-```js
+```javascript
 if(reg.waiting) {
   // update ready
   // tell the user about it
@@ -162,14 +162,14 @@ reg.addEventListener('updatefound', function() {
 1. A sw can use `self.skipWaiting` to skip waiting and take the control straight away.
 2. We can send any message to sw from our `indexController` or `main.js` using `reg.installing.postMessage(data)`.
 3. A sw can listen to message events-
-   ```js
+   ```javascript
    self.addEventListener('message', function(e) {
      // e.data
      // here you can call `self.skipWaiting()`
    })
    ```
 4. To inform the page that service worker has been updated and reload the page. We can listen to `controllerchange` event.
-   ```js
+   ```javascript
    navigator.serviceWorker.addEventListener('controllerchange', function(e) {
      //navigator.serviceWorker.controller has changed
    })
@@ -177,7 +177,7 @@ reg.addEventListener('updatefound', function() {
 
 ### SW Controller
 `navigator.serviceWorker.controller` refers to the sw that is controlling th page.
-```js
+```javascript
 if(!navigator.serviceWorker.controller) {
   // this page didn't loaded by service worker
 }
@@ -186,7 +186,7 @@ if(!navigator.serviceWorker.controller) {
 Browser provides a `cache` api that provies a `caches` global object
 
 ### Opening a cache
-```js
+```javascript
 caches.open('cache-name').then(cache => {
   console.log(cache);
 })
