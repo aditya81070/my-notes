@@ -2,8 +2,14 @@
 
 # CSS Grid Notes
 
+  - [Learning Resources](#learning-resources)
+  - [About](#about)
+  - [Important Terminology](#important-terminology)
+  - [Codepen demos](#codepen-demos)
+
 ## Learning Resources
 1. [CSS Grid Introduction-Css Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/#grid-introduction)
+
 ## About
 CSS grid is a two dimensional model to design layouts and while flex box is a one dimensional model.
 
