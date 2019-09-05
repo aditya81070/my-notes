@@ -1,3 +1,4 @@
+[Home](/)
 # Service worker notes
   - [Registering service worker](#registering-service-worker)
     - [Checking Compatibility](#checking-compatibility)
