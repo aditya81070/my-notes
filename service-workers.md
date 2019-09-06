@@ -2,7 +2,6 @@
 
 # Service worker notes
 
-- [Service worker notes](#service-worker-notes)
   - [Registering service worker](#registering-service-worker)
     - [Checking Compatibility](#checking-compatibility)
   - [Scope](#scope)
